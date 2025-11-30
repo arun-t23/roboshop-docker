@@ -1,13 +1,5 @@
 services:
-  mongodb:
-    build:
-      context: ./mongodb
-      dockerfile: Dockerfile
-    image: arunt98/mongodb:v1
-    container_name: mongodb
-    volumes:
-    - mongodb:/data/db
-  
+
   catalogue:
     build:
       context: ./catalogue
@@ -17,19 +9,23 @@ services:
     depends_on:
     - mongodb
   
-  redis:
+  mongodb:
     build:
-      context: ./redis
+      context: ./mongodb
       dockerfile: Dockerfile
+    image: arunt98/mongodb:v1
+    container_name: mongodb
+    volumes:
+    - mongodb:/data/db
+  
+
+  redis:
     image: redis:7.0
     container_name: redis
     volumes:
     - redis:/data
 
   mysql:
-    build:
-      context: ./mysql
-      dockerfile: Dockerfile
     image: arunt98/mysql:v1
     container_name: mysql
     volumes:
