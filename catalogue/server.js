@@ -50,7 +50,7 @@ app.use((req, res, next) => {
 
     next();
 });
-
+// changes
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
