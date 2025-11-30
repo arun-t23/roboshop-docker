@@ -10,9 +10,7 @@ services:
     - mongodb
   
   mongodb:
-    build:
-      context: ./mongodb
-      dockerfile: Dockerfile
+    build: ./mongodb
     image: arunt98/mongodb:v1
     container_name: mongodb
     volumes:
@@ -33,9 +31,6 @@ services:
     - mysql:/var/lib/mysql  
   
   rabbitmq:
-    build:
-      context: ./rabbitmq
-      dockerfile: Dockerfile
     image: rabbitmq:3
     container_name: rabbitmq
     environment:
