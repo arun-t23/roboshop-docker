@@ -101,7 +101,7 @@ networks:
   default:
     driver: bridge
     name: roboshop
-    external: true ### keep it true if you created the roboshop network using manual command
+    external: false ### keep it true if you created the roboshop network using manual command
 
 volumes:
   mongodb:
