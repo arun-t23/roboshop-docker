@@ -26,6 +26,7 @@ services:
     - redis:/data
 
   mysql:
+    build: ./mysql
     image: arunt98/mysql:v1
     container_name: mysql
     volumes:
