@@ -3,7 +3,7 @@ WORKDIR /opt/server
 COPY payment.ini .
 COPY *.py .
 COPY requirements.txt .
-RUN pip3 install -r --prefix=/install requirements.txt
+RUN pip3 install --prefix=/install -r requirements.txt
 
 
 FROM python:3.9.25-alpine3.21
