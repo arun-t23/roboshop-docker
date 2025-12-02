@@ -25,6 +25,7 @@ COPY --chown=roboshop:roboshop requirements.txt .
 USER roboshop
 CMD ["uwsgi","--ini","payment.ini"]
 
+##
 
 
 
