@@ -22,7 +22,7 @@ COPY --from=builder /install /usr/local
 COPY --chown=roboshop:roboshop payment.ini .
 COPY --chown=roboshop:roboshop *.py .
 COPY --chown=roboshop:roboshop requirements.txt .
-USER roboshop
+# USER roboshop
 CMD ["uwsgi","--ini","payment.ini"]
 
 ##
